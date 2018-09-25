@@ -1,0 +1,51 @@
+<!-- <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">SSLABS</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" routerLink="/sample">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" routerLink="/about">About</a>
+      </li>
+	   <li class="nav-item">
+        <a class="nav-link" routerLink="/contact">Contact us</a>
+      </li>
+    </ul>
+
+  </div>
+</nav>
+<router-outlet></router-outlet> 
+
+<h1>welcome to sslabs</h1>
+{{name}}
+<input type="text" [(ngModel)]="name"><br>
+{{name}}
+<hr>
+<button (click)="count=count+1">click me!</button>
+{{count}}
+<hr>
+<h1 appCustomd>welcome to sslabs</h1> 
+-->
+<table class="table">
+	<tr class="bg-primary">
+		<th>Student Id</th>
+		<th>Student Name</th>
+		<th>Student Course</th>
+		<th>Student DOB</th>
+		<th>Student Fee</th>
+		<th>Student Age</th>
+	</tr>
+	<tr *ngFor="let x of std">
+		<td>{{x.stdid}}</td>
+		<td>{{x.sname|uppercase}}</td>
+		<td>{{x.scourse|lowercase}}</td>
+		<td>{{x.sdob|date}}</td>
+		<td>{{x.sfee|currency:"&#8377;"}}</td>
+		<td>{{x.sdob|page}}</td>
+	</tr>
+</table>
